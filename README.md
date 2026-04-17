@@ -18,7 +18,7 @@ An Odoo 19 module that adds a Quality Review workflow to project tasks.
 
 ### 1. Clone the repo into your Odoo addons folder
 ```bash
-git clone https://github.com/<your-username>/project_task_quality_review.git addons/project_task_quality_review
+git clone https://github.com/NgKhai/project_task_quality_review.git addons/project_task_quality_review
 ```
 
 ### 2. Start Odoo with Docker
