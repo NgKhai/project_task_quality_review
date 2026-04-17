@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit the project form to add quality_inspector_id -->
+    <record id="view_project_project_form_qa" model="ir.ui.view">
+        <field name="name">project.project.form.qa</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <!-- Insert after the project manager field -->
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="quality_inspector_id"
+                       string="Quality Inspector"
+                       domain="[('share', '=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

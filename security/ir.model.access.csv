@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_project_project_qa,project.project qa,model_project_project,,1,1,1,0
+access_project_task_qa,project.task qa,model_project_task,,1,1,1,0

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit the task form view -->
+    <record id="view_task_form_qa" model="ir.ui.view">
+        <field name="name">project.task.form.qa</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+
+            <!-- Add QA fields in the status bar area -->
+            <xpath expr="//header" position="inside">
+                <!-- Button: only shown when stage is Ready for Review and not yet approved -->
+                <button name="action_mark_review_passed"
+                        string="Mark Review Passed"
+                        type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible': [('is_done', '=', True)]}"/>
+            </xpath>
+
+            <!-- Add QA fields in the form chatter area -->
+            <xpath expr="//sheet" position="after">
+                <!-- intentionally empty: fields go inside sheet below -->
+            </xpath>
+
+            <!-- Add is_done and date inside the form sheet -->
+            <xpath expr="//field[@name='date_deadline']" position="after">
+                <field name="is_done"
+                       string="Quality Review Passed"
+                       attrs="{'readonly': [('is_done', '=', True)]}"/>
+                <field name="quality_inspected_date"
+                       string="Inspected On"
+                       attrs="{'invisible': [('is_done', '=', False)]}"
+                       readonly="1"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
