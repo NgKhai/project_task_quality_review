@@ -15,6 +15,6 @@
     <record id="project_stage_done" model="project.task.type">
         <field name="name">Done</field>
         <field name="sequence">4</field>
-        <field name="is_closed">True</field>
+        <field name="fold" eval="True"/>
     </record>
 </odoo>

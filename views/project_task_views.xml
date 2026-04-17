@@ -14,7 +14,7 @@
                         string="Mark Review Passed"
                         type="object"
                         class="oe_highlight"
-                        attrs="{'invisible': [('is_done', '=', True)]}"/>
+                        invisible="is_done"/>
             </xpath>
 
             <!-- Add QA fields in the form chatter area -->
@@ -26,10 +26,10 @@
             <xpath expr="//field[@name='date_deadline']" position="after">
                 <field name="is_done"
                        string="Quality Review Passed"
-                       attrs="{'readonly': [('is_done', '=', True)]}"/>
+                       readonly="is_done"/>
                 <field name="quality_inspected_date"
                        string="Inspected On"
-                       attrs="{'invisible': [('is_done', '=', False)]}"
+                       invisible="not is_done"
                        readonly="1"/>
             </xpath>
 
