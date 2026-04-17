@@ -42,7 +42,9 @@ docker compose exec odoo odoo -d <your_db> -u project_task_quality_review --stop
 
 ## Usage
 1. Create a task and move it to **Ready for Review** — the inspector is auto-assigned.
+![Quality Inspector Assigned](static/description/inspector_assigned.png)
 2. Inspector opens the task and clicks **Mark Review Passed**.
+![Mark Review Passed](static/description/mark_review_passed.png)
 3. Task can now be moved to **Done**.
 
 ## Running Tests
