@@ -1,6 +1,6 @@
 # project_task_quality_review
 
-An Odoo 17 module that adds a Quality Review workflow to project tasks.
+An Odoo 19 module that adds a Quality Review workflow to project tasks.
 
 ## Features
 - Adds a **Quality Inspector** field to `project.project`
@@ -11,7 +11,8 @@ An Odoo 17 module that adds a Quality Review workflow to project tasks.
 
 ## Requirements
 - Docker & Docker Compose
-- Odoo 17 (compatible with 16; Odoo 19 when stable image available)
+- Odoo 19 (`odoo:19.0` official Docker image)
+- PostgreSQL 14+
 
 ## Quick Start
 

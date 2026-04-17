@@ -1,6 +1,6 @@
 {
     'name': 'Project Task Quality Review',
-    'version': '17.0.1.0.0',
+    'version': '19.0.1.0.0',
     'summary': 'QA workflow for project tasks with quality inspector assignment',
     'author': 'Your Name',
     'license': 'LGPL-3',
